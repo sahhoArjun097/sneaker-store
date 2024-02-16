@@ -1,0 +1,282 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: rgb(210, 199, 218);
+   
+
+}
+.container{
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+    
+}
+.store{
+    margin: auto;
+    width: 70%;
+    min-height: 100%;
+
+}
+h1{
+    font-size: 60px;
+    text-align: center;
+    /* font-family:; */
+    padding: 30px;
+}   
+.shoes{
+    width: 100%;
+    /* height: 55%; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+
+
+.card{
+    /* background-color: rgb(104, 97, 97); */
+    border-radius: 30px;
+    width: 30%;
+    height: 55%;
+    border: 1px solid white;
+    /* padding give boundary to the corners of the image so the image didnt seem stick with the boundaries */
+    padding: 10px;
+    /* box shadow give shadow like  - || x px || y px  ||ratio of blur px || color   */
+    box-shadow: 7px 7px 30px rgb(37, 21, 21);
+    margin-bottom: 30px;
+}
+.image{
+    width: 100%;
+    /* height change to % soon */
+    /* height: 70%; */
+    height: 270px;
+    overflow: hidden;
+    border-radius: 25px;
+}
+.image>img{
+    width: 100%;
+    border-radius: 25px;
+    height: 100%;
+    object-fit: cover;
+
+}
+.image>img:hover{
+    transition: 0.2s all ease-in;
+    scale: 1.2;
+}
+
+.detailes{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 13px 10px 8px;
+}
+.description {
+    display: flex;
+    /* new prop flex direction --   */
+    flex-direction: column;
+    gap: 7px;
+}
+p:nth-child(1),p:nth-child(4){
+    font-weight: bold;
+    
+}
+p:nth-child(2),p:nth-child(3){
+    opacity: 0.5;
+}
+.cart>img{
+    width: 37px;
+}
+.cart>img:hover{
+    scale: 1.1;
+    transition: 0.2s all ease-in-out;
+}
+
+
+  /* Mobile: 320px–480px
+  Tablets: 481px–768px
+  Laptops: 769px–1024px
+  Desktops: 1025px–1200px
+  Extra large screens: 1201px and above
+  Desktop computers: 1920px */
+/* mobile */
+
+* {
+    scrollbar-width: auto;
+    scrollbar-color: #484648 #ffffff;
+  }
+  *::-webkit-scrollbar-thumb {
+    background-color: #20c568;
+    border-radius: 10px;
+    border: 3px solid #ffffff;
+  } 
+
+@media screen and (max-width: 319px)  {
+    .card {
+        border-radius: 30px;
+        width: 100%;
+        height: 55%;
+        border: 1px solid white;
+        padding: 10px;
+        box-shadow: 7px 7px 30px rgb(37, 21, 21);
+        margin-bottom: 30px;
+    }
+/* when screen is going small place the elements to stick with the boundaries  just like 95% cover to the boundaries*/
+    .store {
+        margin: auto;
+        width: 95%;
+        min-height: 100%;
+    }
+}
+
+
+
+
+/* -------------------------------------------------------------------- */
+
+
+@media screen and (min-width:320px)  and (max-width:399px){
+    .store {
+        margin: auto;
+        width: 75%;
+        min-height: 100%;
+    }
+    .card {
+        border-radius: 30px;
+        width: 100%;
+        height: 55%;
+        border: 1px solid white;
+        padding: 10px;
+        box-shadow: 7px 7px 30px rgb(37, 21, 21);
+        margin-bottom: 30px;
+    }
+    
+    
+}
+
+/* ---------------------------------------------------------------------------- */
+
+@media screen and (min-width: 400px) and (max-width:540px) {
+    .store {
+        margin: auto;
+        width: 75%;
+        min-height: 100%;
+    }
+    .card {
+        /* after reaching to the certain width we can adjust the apperance  by swiching the elements for top-bottom to left-right by
+         applying flex properity and flex has 2 siblings too some time  */
+
+        display: flex;
+        /* justify-content: space-between; */
+        border-radius: 30px;
+        width: 100%;
+        /* height: 55%; */
+        border: 1px solid white;
+        padding: 10px;
+        box-shadow: 7px 7px 30px rgb(37, 21, 21);
+        margin-bottom: 30px;
+    }
+    .image {
+        width: 60%;
+        /* height: 70%; */
+        /* position:; */
+        height: 170px;
+        overflow: hidden;
+        border-radius: 25px;
+    }
+    .detailes {
+        /* this flex pop hit different  */
+        display: flex;
+        height: 100%;
+        width: 45%;
+        /* display: block; */
+        /* this prop  giving main effect to the position of the elements  */
+        flex-direction: column;
+        /* justify-content: center  ; */
+        /* justify-content: space-between; */
+        /* align-items: center; */
+        padding: 15px 4px 1px;
+    }
+    .cart{
+        padding-top: 10px;
+        scale: 1;
+    }
+}
+
+/* -------------------------------------------------------------------------------------------------- */
+
+@media screen and (min-width: 541px) and (max-width:740px) {
+    .store {
+        margin: auto;
+        width: 90%;
+        min-height: 100%;
+    }
+    .card {
+        border-radius: 30px;
+        width: 45%;
+        justify-content: space-between;
+        /* height: 5%; */
+        border: 1px solid white;
+        padding: 10px;
+        box-shadow: 7px 7px 30px rgb(37, 21, 21);
+        margin-bottom: 30px;
+    }
+}
+/* ------------------------------------------------------------------------------------------------ */
+    
+  
+@media screen and (min-width: 741px) and (max-width:1000px) {
+    .store {
+        margin: auto;
+        width: 90%;
+        min-height: 100%;
+    }
+    .card {
+        border-radius: 30px;
+        width: 30%;
+        justify-content: space-between;
+        /* height: 5%; */
+        border: 1px solid white;
+        padding: 10px;
+        box-shadow: 7px 7px 30px rgb(37, 21, 21);
+        margin-bottom: 30px;
+    }
+    .image {
+        width: 100%;
+        /* height: 70%; */
+        /* position:; */
+        height: 170px;
+        overflow: hidden;
+        border-radius: 25px;
+    }
+
+}
+/* ------------------------------------------------------------------------------------------------------ */
+    
+@media screen and (min-width: 1001px) and (max-width:1200px) {
+    .store {
+        margin: auto;
+        width: 90%;
+        min-height: 100%;
+    }
+    .card {
+        border-radius: 30px;
+        width: 30%;
+        justify-content: space-between;
+        /* height: 5%; */
+        border: 1px solid white;
+        padding: 10px;
+        box-shadow: 7px 7px 30px rgb(37, 21, 21);
+        margin-bottom: 30px;
+    }
+    .image {
+        width: 100%;
+        /* height: 70%; */
+        /* position:; */
+        /* height: 170px; */
+        overflow: hidden;
+        border-radius: 25px;
+    }
+
+}
